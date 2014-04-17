@@ -21,7 +21,7 @@ class Layout {
 		/**
 		 * CSS, JS cachebusting
 		 */
-		define( 'DC9_CSS_VERSION', '6' );
+		define( 'DC9_CSS_VERSION', '7' );
 
 		/**
 		 * Load scripts and styles

@@ -1,0 +1,74 @@
+@import 'compass';
+
+/*
+Layout variables:
+*/
+$page_wrap_width: 960px;
+$menu_width: 240px;
+$header_height: 250px;
+$language_switcher_height: 53px;
+$sections_gutter: 10px;
+$language_switcher_right_padd: 16px;
+$main_article_width: 710px;
+$main_article_side_padding: 20px;
+$main_article_inner_width: $main_article_width - ( 2 * $main_article_side_padding );
+$sidebar_width: ( $page_wrap_width - $main_article_width - $sections_gutter );
+$sidebar_button_height: 53px;
+$sidebar_button_padding: 20px;
+$sidebar_siblings_margin: 2px;
+
+/*
+Colors:
+*/
+$search_background: #222222;
+$main_menu_item_background: #da3610;
+$main_menu_item_background_hover: #a3280c;
+$logotext_background: $main_menu_item_background;
+$logotext_color: #FFF;
+$body_background: #f4f4f4;
+$main_article_background: #ffffff;
+$submenu_hover: #e3684c;
+$main_text_color: #222222;
+$headings_color: #00a1dd;
+$headings_hover_color: #155682;
+$items_separator_color: #dddddd;
+
+/*
+Mixins
+*/
+@mixin add_main_menu_icon($content: '\e601', $color: $main_menu_item_background, $size: 17px, $pseudoelement: 'after', $opacity: 1, $transition: false, $include_relative: true) {
+	@if($include_relative) {
+		position: relative;
+	}
+
+	&::#{$pseudoelement} {
+		@extend %iconfont;
+		content: $content;
+		color: $color;
+		font-size: $size;
+		position: absolute;
+		right: $sidebar_button_padding;
+		top: 50%;
+		margin-top: -($size/2);
+		@if($opacity != 1) {
+			opacity: $opacity;
+		}
+		@if($transition != false) {
+			transition: $transition;
+		}
+	}
+}
+
+@mixin iconfont() {
+	font-family: 'iconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,193 @@
+@import "global";
+
+@include font-face( 'iconfont_contact', font-files( 'iconfont_contact.woff', 'iconfont_contact.ttf', 'iconfont_contact.svg' ), 'iconfont_contact.eot', normal, normal );
+
+%contact_iconfont {
+	font-family: 'iconfont_contact';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.contact {
+
+	form {
+		$input_width: 90%;
+
+		margin: 50px auto;
+		display: block;
+		width: 80%;
+		text-align: right;
+
+		label {
+			display: block;
+			//outline: 1px solid red;
+			font-size: 0;
+			color: transparent;
+			text-align: right;
+			margin: 0 0 20px 0;
+			position: relative;
+
+			&::before {
+				@extend %contact_iconfont;
+				color: $search_background;
+				font-size: 25px;
+				position: absolute;
+				top: 9px;
+				left: 2.5%;
+			}
+		}
+
+		input,
+		textarea {
+			display: inline-block;
+			font-size: 18px;
+			font-family: bender;
+			color: #FFF;
+			background: $search_background;
+			border: none;
+			padding: 10px 20px;
+			width: $input_width;
+			resize: none;
+		}
+
+		textarea {
+			transition: height 300ms;
+		}
+
+		$form_placeholder_prefixes: ('::-webkit-input-placeholder', ':-moz-placeholder', '::-moz-placeholder', ':-ms-input-placeholder', '::input-placeholder', '::placeholder' );
+		@each $prefix in $form_placeholder_prefixes {
+			input[placeholder]#{$prefix},
+			textarea[placeholder]#{$prefix} {
+				color: #919191;
+			}
+		}
+
+		//polyfill
+		.placeheld {
+			color: #919191;
+		}
+
+		.name::before {
+			content: "\e601";
+		}
+
+		.email::before {
+			content: "\e602";
+		}
+
+		.message::before {
+			content: "\e600";
+		}
+
+		.wpcf7-form-control-wrap {
+			display: inline-block !important;
+			width: 100%;
+		}
+
+		input[type=submit] {
+			background: none;
+			color: $main_menu_item_background;
+			text-transform: uppercase;
+			font-size: 24px;
+			transition: color 300ms;
+			margin-left: ( 100% - $input_width );
+
+			&:hover {
+				color: $main_menu_item_background_hover;
+			}
+
+			&:focus,
+			&:active {
+				outline: none;
+				color: $main_menu_item_background_hover;
+			}
+		}
+
+		.wpcf7-not-valid-tip {
+			font-size: 0;
+			color: transparent;
+
+			&::after {
+				@extend %contact_iconfont;
+				content: "\e603";
+				font-size: 20px;
+				position: absolute;
+				top: 11px;
+				right: -28px;
+				color: red;
+			}
+		}
+
+
+
+		.quiz {
+			text-align: right;
+			position: relative;
+
+			.wpcf7-not-valid-tip {
+				position: absolute;
+			}
+		}
+
+		.wpcf7-quiz-label {
+			display: inline-block;
+			font-size: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			&::before {
+				@extend %contact_iconfont;
+				color: $search_background;
+				font-size: 40px;
+				position: absolute;
+				top: 2px;
+				left: 5px;
+				content: "\e604";
+			}
+		}
+
+		.ajax-loader {
+			display: block;
+			width: 40px;
+			height: 40px;
+			margin-left: 50%;
+		}
+
+		.wpcf7-response-output {
+			display: inline-block !important;
+			text-align: center;
+			border: 3px solid red;
+			padding: 5px 10px;
+			font-family: Bender;
+			width: 90%;
+
+			&.wpcf7-mail-sent-ok {
+				border-color: green;
+			}
+		}
+
+		.wpcf7-display-none {
+			opacity: 0;
+			transition: opacity 300ms;
+
+			&.wpcf7-validation-errors,
+			&.wpcf7-spam-blocked,
+			&.wpcf7-mail-sent-ok,
+			&.wpcf7-mail-sent-ng {
+				opacity: 1;
+			}
+		}
+
+	}
+
+}
+

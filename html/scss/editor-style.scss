@@ -1,0 +1,38 @@
+@import "global";
+@import "main_content_typography";
+
+@include font-face('bender', font-files('bender_bd.woff', 'bender_bd.ttf', 'bender_bd.svg'), 'bender_bd.eot', normal, normal);
+@include font-face('bender', font-files('bender_bdit.woff', 'bender_bdit.ttf', 'bender_bdit.svg'), 'bender_bdit.eot', normal, italic);
+@include font-face('iconfont', font-files('dc9_iconfont.woff', 'dc9_iconfont.ttf', 'dc9_iconfont.svg'), 'dc9_iconfont.eot', normal, normal);
+
+.mceContentBody {
+
+	//my reset
+	* {
+		box-sizing: border-box;
+	}
+
+	nav ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: block;
+
+		li {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	@include main_content_typo();
+
+}

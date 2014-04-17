@@ -1,0 +1,16 @@
+*
+!html
+!html/**
+html/node_modules
+html/images
+html/css
+html/.sass-cache
+!wp
+!wp/wp-content
+!wp/wp-content/themes
+!wp/wp-content/themes/dc9
+!wp/wp-content/themes/dc9/**
+wp/wp-content/themes/dc9/css
+wp/wp-content/themes/dc9/fonts
+wp/wp-content/themes/dc9/images
+wp/wp-content/themes/dc9/js

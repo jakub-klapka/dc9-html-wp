@@ -1,0 +1,46 @@
+@import "global";
+
+.single-novinky {
+
+	.adjacent_links {
+		margin-top: 30px;
+
+		&::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	%previous_next_common {
+
+		color: $headings_color;
+		transition: color 300ms;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $headings_hover_color;
+		}
+
+	}
+
+	.previous {
+		@extend %previous_next_common;
+		float: left;
+
+		&::before {
+			content: '\00ab\00a0';
+		}
+	}
+
+	.next {
+		@extend %previous_next_common;
+		float: right;
+
+		&::after {
+			content: ' \00a0\00bb';
+		}
+	}
+
+}

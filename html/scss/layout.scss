@@ -1,0 +1,439 @@
+@import "global";
+@import "normalize";
+@import "main_content_typography";
+
+//my reset
+* {
+	box-sizing: border-box;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: block;
+
+	li {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+/*
+Fonts
+*/
+@include font-face('bender', font-files('bender_bd.woff', 'bender_bd.ttf', 'bender_bd.svg'), 'bender_bd.eot', normal, normal);
+@include font-face('bender', font-files('bender_bdit.woff', 'bender_bdit.ttf', 'bender_bdit.svg'), 'bender_bdit.eot', normal, italic);
+@include font-face('iconfont', font-files('dc9_iconfont.woff', 'dc9_iconfont.ttf', 'dc9_iconfont.svg'), 'dc9_iconfont.eot', normal, normal);
+
+%iconfont {
+	@include iconfont();
+}
+
+/*
+WP Images
+*/
+@include wordpress_image_styles();
+
+/*
+Layout:
+*/
+body {
+	background: $body_background;
+}
+
+.page_wrap {
+	width: $page_wrap_width;
+	margin: 0 auto;
+}
+
+.main_header {
+	margin: 40px 0 0 0;
+	height: $header_height;
+	position: relative;
+	font-family: bender;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 52px; //for tagline
+
+	.language_switcher {
+		width: $menu_width;
+		height: $language_switcher_height;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: $search_background;
+		line-height: $language_switcher_height;
+		text-align: right;
+		padding-right: $language_switcher_right_padd;
+		color: mix( $search_background, #FFF );
+		font-size: 18px;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			transition: color 300ms;
+
+			&:hover {
+				color: #FFF;
+			}
+		}
+
+		.active {
+			color: #FFF;
+		}
+	}
+
+	.main_logo_text {
+		width: $menu_width;
+		height: ($header_height - $language_switcher_height - $sections_gutter );
+		background: $logotext_background;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding-right: $language_switcher_right_padd;
+		text-align: right;
+		display: table;
+		vertical-align: middle;
+
+		a {
+			display: table-cell;
+			color: $logotext_color;
+			margin: 0;
+			font-weight: normal;
+			font-size: 40px;
+			line-height: 1.1em;
+			vertical-align: middle;
+			text-decoration: none;
+		}
+
+		h1 {
+			font-weight: inherit;
+			font-size: inherit;
+			margin: 0;
+		}
+	}
+
+	.main_logo_image {
+		display: block;
+		width: 710px;
+		height: 250px;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		img {
+			display: block;
+		}
+	}
+
+	.tagline {
+		$height: 52px;
+		height: $height;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		line-height: $height;
+		text-align: center;
+		font-style: italic;
+		font-size: 14px;
+		text-transform: none;
+	}
+}
+
+.content {
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.main_article {
+	width: $main_article_width;
+	float: left;
+	background: $main_article_background;
+	padding: 40px $main_article_side_padding;
+	transition: min-height 300ms; //for menu height check in JS
+
+	@include main_content_typo;
+}
+
+%menu_anchor_common {
+	display: block;
+	//height: $sidebar_button_height; disable fot multiline text
+	padding: 0 $sidebar_button_padding;
+	line-height: $sidebar_button_height;
+	font-family: bender;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.main_sidebar {
+	width: $sidebar_width;
+	float: right;
+	position: relative;
+
+	.search {
+		display: block;
+		height: $sidebar_button_height;
+		background: $search_background;
+		padding: 0 $sidebar_button_padding;
+		line-height: $sidebar_button_height;
+		position: relative;
+		margin-bottom: $sections_gutter;
+
+		input[type=text] {
+			display: inline-block;
+			width: ( $sidebar_width - ( $sidebar_button_padding * 2 ) - 20px );
+			background: transparent;
+			border: none;
+			color: #FFF;
+			font-family: bender;
+			font-size: 18px;
+			text-transform: uppercase;
+
+			&:active,
+			&:focus {
+				outline: 1px solid grey;
+			}
+
+			$form_placeholder_prefixes: ('::-webkit-input-placeholder', ':-moz-placeholder', '::-moz-placeholder', ':-ms-input-placeholder', '::input-placeholder', '::placeholder' );
+			@each $prefix in $form_placeholder_prefixes {
+				&[placeholder]#{$prefix} {
+					color: gray;
+				}
+			}
+
+			//Polyfill:
+			&.placeheld {
+				color: grey;
+			}
+		}
+
+		button[type=submit] {
+			$height: 16px;
+			width: $height;
+			height: $height;
+			background: transparent;
+			border: none;
+			position: absolute;
+			right: $sidebar_button_padding;
+			top: ( ( $sidebar_button_height / 2 ) - ( $height / 2 ) );
+			color: transparent;
+			font-size: 0;
+			padding: 0;
+
+			&:before {
+				@extend %iconfont;
+				content: "\e600";
+				font-size: 16px;
+				color: #FFF;
+			}
+		}
+	}
+
+	.main_menu {
+		margin-bottom: $sections_gutter;
+
+		a:focus,
+		a:active {
+			outline: none;
+		}
+
+		&>ul {
+			//top level menu
+
+			&>li {
+				display: block;
+				margin-bottom: $sidebar_siblings_margin;
+				background: $main_menu_item_background;
+				transition-property: background-color;
+				transition-duration: 300ms;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				&:hover {
+					background: $main_menu_item_background_hover;
+				}
+
+				a,
+				span {
+					@extend %menu_anchor_common;
+					color: #FFF;
+				}
+
+				&.active {
+					position: relative;
+
+					&>a,
+					&>span {
+						color: $main_menu_item_background;
+						background: $main_article_background;
+
+						@include add_main_menu_icon();
+					}
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						right: 100%;
+						width: $sections_gutter;
+						background: $main_article_background;
+					}
+				}
+
+				&.has_submenu {
+					//li with submenu
+					transition: background-color 300ms;
+
+					ul {
+						display: none; //submenu defaults to hidden
+					}
+
+					&>a,
+					&>span {
+						@include add_main_menu_icon("\e602", #FFF, 17px, 'after', 0, opacity 300ms ); //close icon - defaultly opacity 0
+						@include add_main_menu_icon("\e603", #FFF, 17px, 'before', 1, opacity 300ms, false ); //open icon
+					}
+
+					&.open {
+						background: $main_menu_item_background_hover;
+
+						&>a,
+						&>span {
+							//anchor in open submenu
+							&::before {
+								//open icon
+								opacity: 0;
+							}
+							&::after {
+								//close icon
+								opacity: 1;
+							}
+						}
+					}
+
+					&.active {
+
+						ul {
+							display: block;
+							padding-top: 20px;
+							background: $main_menu_item_background_hover;
+						}
+
+						&>a,
+						&>span {
+							//anchor in open active submenu
+							@include add_main_menu_icon("\e601", $main_menu_item_background, 17px, 'before' ); //open icon
+							&::after {
+								display: none;
+							}
+						}
+					}
+				}
+
+				ul {
+					//submenu
+					padding-bottom: 20px;
+
+					li {
+
+						a {
+							$height: 30px;
+							height: $height;
+							line-height: $height;
+							font-size: 14px;
+							padding-left: ( $sidebar_button_padding + 10px );
+							transition: color 300ms;
+
+							&:hover {
+								color: $submenu_hover;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.subscription {
+		margin-bottom: $sections_gutter;
+
+		a {
+			@extend %menu_anchor_common;
+			background: #222222;
+			color: #FFF;
+			margin-bottom: $sidebar_siblings_margin;
+			transition: background-color 300ms;
+
+			&:hover {
+				background: #404040;
+			}
+		}
+
+		a.newsletter {
+			@include add_main_menu_icon('\e605', #FFF);
+		}
+
+		a.rss {
+			background: #ff9800;
+			color: #FFF;
+			transition: background-color 300ms;
+			@include add_main_menu_icon('\e606', #FFF);
+
+			&:hover {
+				background: #d17600;
+			}
+		}
+
+		a:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.friends_links {
+
+		a {
+			@extend %menu_anchor_common;
+			background: #00a1dd;
+			color: #FFF;
+			margin-bottom: $sidebar_siblings_margin;
+			transition: background-color 300ms;
+			@include add_main_menu_icon('\e604', #FFF);
+
+			&:hover {
+				background: #155682;
+			}
+		}
+	}
+}
+
+.copyright {
+	display: block;
+	clear: both;
+	position: relative;
+	$top: 70px;
+	top: $top;
+	left: 180px;
+	margin-bottom: $top + 70px;
+}

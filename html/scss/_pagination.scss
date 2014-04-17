@@ -1,0 +1,64 @@
+.pagination {
+	display: table;
+	width: 100%;
+
+	a,
+	span {
+		color: $headings_color;
+		text-decoration: none;
+		font-family: bender;
+		text-transform: uppercase;
+		font-size: 14px;
+
+		&:hover {
+			color: $headings_hover_color;
+		}
+	}
+
+	span {
+		color: $headings_hover_color;
+	}
+
+	.older,
+	.pages,
+	.newer,
+	.placeholder {
+		display: table-cell;
+	}
+
+	.newer,
+	.older,
+	.placeholder {
+		width: 30%; //to have same table width on prev and next link -> anchors will be perfectly centered
+	}
+
+	.newer {
+		text-align: left;
+
+		&::before {
+			content: '\003c\00a0';
+		}
+	}
+
+	.pages {
+		text-align: center;
+
+		a,
+		span {
+			margin: 0 5px;
+		}
+
+		.current {
+			color: $headings_hover_color;
+		}
+	}
+
+	.older {
+		text-align: right;
+
+		&::after {
+			content: '\00a0\003e';
+		}
+	}
+
+}

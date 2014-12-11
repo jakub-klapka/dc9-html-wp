@@ -43,7 +43,7 @@ class PluginModifications {
 		 * Flamingo roles
 		 */
 		remove_filter( 'map_meta_cap', 'flamingo_map_meta_cap' );
-
+		/*		WP Stream indicator		*/		add_filter( 'wp_stream_frontend_indicator', function() { return false; } );
 
 	}
 

@@ -11,7 +11,7 @@
 			</nav>
 			<section class="subscription">
 				<?php /*<a class="newsletter" href="">Newsletter</a> */?>
-				<a class="rss" href="<?php bloginfo('url'); ?>/feed"><?php _e('RSS Feed', 'Theme'); ?></a>
+				<a class="rss" href="<?php echo trailingslashit( get_bloginfo('url') ); ?>feed/"><?php _e('RSS Feed', 'Theme'); ?></a>
 			</section>
 			<?php $friends_links = dc9_get_option( 'friends_links' ); ?>
 			<?php if( !empty( $friends_links ) ): ?>
@@ -23,7 +23,7 @@
 			<?php endif; ?>
 		</aside>
 
-		<a class="copyright" href="">
+		<a class="copyright" href="http://www.lumiart.cz" target="_blank">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/copyright.png" alt="Design and code by Lumiart" width="351" height="30" />
 		</a>
 

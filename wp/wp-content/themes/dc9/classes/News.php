@@ -33,7 +33,7 @@ class News extends Pagination {
 		/*
 		 * Tell pagination who we are
 		 */
-		$this->pagination_for = 'novinky';
+		$this->pagination_for = 'novinky';								add_filter( 'wpseo_canonical', array( $this, 'check_for_news_canonical_url' ) );		add_filter( 'wpseo_prev_rel_link', array( $this, 'check_for_news_canonical_url' ) );		add_filter( 'wpseo_next_rel_link', array( $this, 'check_for_news_canonical_url' ) );
 
 	}
 
@@ -114,7 +114,7 @@ class News extends Pagination {
 		}
 
 		//TODO: handle click on ENGLISH when on english news archive
-	}
+	}		public function check_for_news_canonical_url( $url ) {				if( strpos( $url, 'en/novinky/' ) !== false ) {			return str_replace( 'en/novinky/', 'en/news/', $url );		}				return $url;			}
 
 
 

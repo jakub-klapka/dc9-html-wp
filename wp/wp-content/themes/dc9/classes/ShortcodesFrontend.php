@@ -46,7 +46,7 @@ class ShortcodesFrontend {
 	public function youtube_shortcode($atts, $content = null)
 	{
 		$atts = shortcode_atts( array( 'url' => '' ), $atts );
-		$video_id = preg_match( '/v=(.+?)($|&)/', $atts['url'], $matches );
+		$video_id = preg_match( "/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $atts['url'], $matches );
 
 		$output = '';
 		if( isset( $matches[1] ) ) {

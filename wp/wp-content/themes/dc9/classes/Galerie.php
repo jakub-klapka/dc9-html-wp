@@ -20,7 +20,7 @@ class Galerie {
 		/*
 		 * Modify archive query to sort by last modified field
 		 */
-		add_action( 'pre_get_posts', array( $this, 'sort_main_query_by_modified' ) );
+		add_action( 'pre_get_posts', array( $this, 'sort_main_query_by_modified' ) );		
 
 	}
 
@@ -65,7 +65,7 @@ class Galerie {
 			!isset( $query->query['galerie'] ) )
 			{
 				//We are dealing with galerie archive page
-
+				$query->set( 'nopaging', true );
 				$query->set( 'orderby', 'meta_value_num' );
 				$query->set( 'meta_key', 'gallery_last_modified' );
 			}

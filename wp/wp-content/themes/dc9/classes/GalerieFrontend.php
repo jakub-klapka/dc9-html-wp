@@ -22,7 +22,7 @@ class GalerieFrontend {
 		/*
 		 * Remove default PE2 styles and enqueue ours
 		 */
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );				add_filter( 'wpseo_canonical', array( $this, 'check_for_gallery_canonical_url' ) );
 	}
 
 	public function enqueue_styles() {
@@ -75,7 +75,7 @@ class GalerieFrontend {
 	public function the_modified_date() {
 		$date = date_create( get_field( 'gallery_last_modified' ) );
 		echo date_format( $date, get_option('date_format') );
-	}
+	}		public function check_for_gallery_canonical_url( $url ) {				if( strpos( $url, 'en/galerie/' ) !== false ) {			return str_replace( 'en/galerie/', 'en/gallery/', $url );		}				return $url;			}
 
 }
 

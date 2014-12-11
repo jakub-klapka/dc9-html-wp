@@ -9,7 +9,7 @@ class UpdatesFrontend extends Pagination {
 		/*
 		 * Tell pagination who we are
 		 */
-		$this->pagination_for = 'updates';
+		$this->pagination_for = 'updates';				add_filter( 'wpseo_canonical', array( $this, 'check_for_updates_canonical_url' ) );		add_filter( 'wpseo_prev_rel_link', array( $this, 'check_for_updates_canonical_url' ) );		add_filter( 'wpseo_next_rel_link', array( $this, 'check_for_updates_canonical_url' ) );
 	}
 
 	public function setup_updates() {
@@ -51,7 +51,7 @@ class UpdatesFrontend extends Pagination {
 		} else {
 			echo get_bloginfo( 'url' ) . 'updates';
 		}
-	}
+	}			public function check_for_updates_canonical_url( $url ) {				if( strpos( $url, 'en/aktualizace/' ) !== false ) {			return str_replace( 'en/aktualizace/', 'en/updates/', $url );		}				return $url;			}
 
 }
 

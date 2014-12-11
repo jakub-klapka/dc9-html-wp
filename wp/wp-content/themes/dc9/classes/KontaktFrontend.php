@@ -14,7 +14,7 @@ class KontaktFrontend {
 
 		add_action( 'wpcf7_form_elements', array( $this, 'add_placeholder_to_quiz' ) );
 
-		$this->form_markup = get_field( 'which_form' );
+		$this->form_markup = do_shortcode( '[contact-form-7 id="' . get_field( 'which_form' ) . '"]' );
 	}
 
 	public function has_form()

@@ -72,7 +72,7 @@ if ( post_password_required() ) {
 
 	comment_form( array(
 		'fields' => apply_filters( 'comment_form_default_fields', $fields ),
-		'comment_notes_before' => '<p class="comment-notes">' . __( 'Pokud zadáte e-mailovou adresu, dostanete upozornění na nové komentáře. Váš e-mail nebude nikde zobrazen.', 'Theme' ) . '</p>',
+		'comment_notes_before' => '<p class="comment-notes">' . __( 'Váš e-mail slouží pouze k zasílání notifikací a nebude nikde zobrazen.', 'Theme' ) . '</p>',
 		'comment_notes_after' => '',
 		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea required id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
 	) ); ?>

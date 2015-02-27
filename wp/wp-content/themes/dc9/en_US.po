@@ -1,208 +1,229 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DC9 Theme\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-28 14:00+0100\n"
-"PO-Revision-Date: 2014-03-28 14:00+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: Fri Feb 27 2015 15:29:55 GMT+0100 (Střední Evropa (běžný "
+"čas))\n"
+"Last-Translator: Kuba <lapak@lumiart.cz>\n"
 "Language-Team: Lumiart <lumiart@lumiart.cz>\n"
-"Language: en\n"
+"Language: English\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x\n"
-"X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: C:\\xampp\\htdocs\\dc9\\wp\\wp-content\\themes\\dc9\n"
+"X-Loco-Target-Locale: en_US"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-galerie.php:7
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-galerie.php:14
+#: archive-galerie.php:7 /archive-galerie.php:14
 msgid "Galerie"
 msgstr "Gallery"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-galerie.php:16
+#: archive-galerie.php:16
 msgid "Aktualizováno"
 msgstr "Updated"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-novinky.php:5
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/home.php:35
+#: archive-novinky.php:5 /home.php:35
 msgid "Archív novinek"
 msgstr "News archive"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-novinky.php:12
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-updates.php:17
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/search.php:12
+#: archive-novinky.php:12 /archive-updates.php:17 /search.php:12
 msgid "Omlouváme se, nemáme zde žádné novinky."
 msgstr "We're sorry, there are no news."
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-novinky.php:18
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-updates.php:23
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/search.php:18
+#: archive-novinky.php:18 /archive-updates.php:23 /search.php:18
 msgid "Předchozí novinky"
 msgstr "Previous news"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-novinky.php:28
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-updates.php:33
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/search.php:28
+#: archive-novinky.php:28 /archive-updates.php:33 /search.php:28
 msgid "Další novinky"
 msgstr "Next news"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-updates.php:5
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/home.php:22
+#: archive-updates.php:5 /home.php:22
 msgid "Archív aktualizací"
 msgstr "Updates archive"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/archive-updates.php:11
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/template_part_news_item.php:4
+#: archive-updates.php:11 /template_part_news_item.php:4
 msgid "Zveřejněno"
 msgstr "Published on"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/footer.php:2
+#: comments.php:27
+#, php-format
+msgid "Jeden komentář k &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s komentářů k &ldquo;%2$s&rdquo;"
+msgstr[0] "One comment to &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comments to &ldquo;%2$s&rdquo;"
+
+#: comments.php:34 /comments.php:52
+msgid "Navigace"
+msgstr "Navigation"
+
+#: comments.php:35 /comments.php:53
+msgid "&larr; Starší komentáře"
+msgstr "&larr; Older comments"
+
+#: comments.php:36 /comments.php:54
+msgid "Novější komentáře &rarr;"
+msgstr "Newer comments &rarr;"
+
+#: comments.php:59
+msgid "Komentáře jsou uzavřeny."
+msgstr "Comments are closed."
+
+#: comments.php:67
+msgid "Name"
+msgstr "Name"
+
+#: comments.php:69
+msgid "Email"
+msgstr "E-mail"
+
+#: comments.php:75
+msgid "Váš e-mail slouží pouze k zasílání notifikací a nebude nikde zobrazen."
+msgstr "Your e-mail is used only to send notifications and won't be visible public."
+
+#: comments.php:77
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: footer.php:2
 msgid "Postranní panel"
 msgstr "Sidebar"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/footer.php:4
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/footer.php:5
+#: footer.php:4 /footer.php:5 /footer.php:5
 msgid "Hledat"
 msgstr "Search"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/footer.php:6
+#: footer.php:6
 msgid "Odeslat"
 msgstr "Send"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/footer.php:9
+#: footer.php:9
 msgid "Menu"
 msgstr "Menu"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/footer.php:14
+#: footer.php:14
 msgid "RSS Feed"
 msgstr "RSS Feed"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/header.php:41
+#: header.php:41
 msgid "Vyberte jazyk"
 msgstr "Choose your language"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/header.php:49
+#: header.php:49
 msgid "Obrázek NWA DC9 v letu"
 msgstr "Photo of NWA DC9 inflight."
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/home.php:13
+#: home.php:13
 msgid "Novinky projektu"
 msgstr "Project news"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/home.php:19
+#: home.php:19
 msgid "Přidáno"
 msgstr "Added"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/search.php:5
+#: search.php:5
 msgid "Výsledky hledání pro:"
 msgstr "Search results for:"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/taxonomy-video-category.php:7
+#: taxonomy-video-category.php:7
 msgid "Videa"
 msgstr "Videos"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/taxonomy-video-category.php:12
+#: taxonomy-video-category.php:12
 msgid "Podkategorie"
 msgstr "Subcategories"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/taxonomy-video-category.php:41
+#: taxonomy-video-category.php:41
 msgid "Předchozí videa"
 msgstr "Previous videos"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/taxonomy-video-category.php:51
+#: taxonomy-video-category.php:51
 msgid "Další videa"
 msgstr "Next videos"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/template_part_news_item.php:12
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/template_part_news_item.php:16
+#: template_part_news_item.php:4
+msgid "Komentářů"
+msgstr "Comments"
+
+#: template_part_news_item.php:12 /template_part_news_item.php:16
 msgid "Číst více..."
 msgstr "Read more..."
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/Admin.php:85
+#: classes/Admin.php:85
 msgid "Zástupce pro podmenu"
 msgstr "Shortcut for submenu"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/Admin.php:130
+#: classes/Admin.php:130
 msgid "Odkaz na výpis galerií"
 msgstr "Link to gallery archive"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:51
+#: classes/dashboard_activity.php:51
 #, php-format
 msgid "Ukázat %s dalších…"
 msgstr "Show %s more..."
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:67
+#: classes/dashboard_activity.php:67
 msgid "Dnes"
 msgstr "Today"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:69
+#: classes/dashboard_activity.php:69
 msgid "Zítra"
 msgstr "Tomorrow"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:72
+#: classes/dashboard_activity.php:72
 msgid "j.n.Y"
 msgstr "j.n.Y"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:77
+#: classes/dashboard_activity.php:77
 #, php-format
 msgid "<span>%1$s, %2$s</span> <a href=\"%3$s\">%4$s</a>"
 msgstr "<span>%1$s, %2$s</span> <a href=\"%3$s\">%4$s</a>"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:112
+#: classes/dashboard_activity.php:112
 msgid "Bude brzo publikováno"
 msgstr "Will be published soon"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:122
+#: classes/dashboard_activity.php:122
 msgid "Nedávno publikováno"
 msgstr "Recently published"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/dashboard_activity.php:131
+#: classes/dashboard_activity.php:131
 msgid "Zatím žádná aktivita"
 msgstr "No activity yet"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/Galerie.php:53
+#: classes/Galerie.php:53
+msgctxt "URL Slug"
 msgid "galerie"
-msgstr "gallery"
+msgstr ""
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/GalerieAdmin.php:274
+#: classes/GalerieAdmin.php:274
 msgid "fotek"
 msgstr "photos"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/GalerieAdmin.php:274
+#: classes/GalerieAdmin.php:274
 msgid "fotka"
 msgstr "photo"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/KontaktFrontend.php:57
+#: classes/KontaktFrontend.php:57
 msgid "(vložte správné číslo)"
 msgstr "(input correct number)"
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/News.php:67
+#: classes/News.php:67
+msgctxt "URL slug"
 msgid "novinky"
-msgstr "news"
+msgstr ""
 
-#: C:\xampp\htdocs\dc9\wp\wp-content\themes\dc9/classes/Updates.php:52
+#: classes/Updates.php:52
+msgctxt "Theme"
 msgid "aktualizace"
-msgstr "updates"
-
-#~ msgid "See %s more…"
-#~ msgstr "Ukázat %s další"
-
-#~ msgid "Today"
-#~ msgstr "Dnes"
-
-#~ msgid "Tomorrow"
-#~ msgstr "Zítra"
-
-#~ msgid "M jS"
-#~ msgstr "j.n.Y"
-
-#~ msgid "Publishing Soon"
-#~ msgstr "Bude brzo publikováno"
-
-#~ msgid "Recently Published"
-#~ msgstr "Nedávno publikováno"
-
-#~ msgid "No activity yet!"
-#~ msgstr "Zatím žádná aktivita!"
+msgstr ""

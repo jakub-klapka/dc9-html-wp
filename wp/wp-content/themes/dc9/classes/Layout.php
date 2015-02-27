@@ -57,6 +57,8 @@ class Layout {
 
 	}
 
+
+
 	/**
 	 * Register all scripts and styles on page, to be used on specific pages
 	 * @return void
@@ -166,7 +168,6 @@ class Layout {
 	public function removePageSupport(){
 		remove_post_type_support( 'page', 'author' );
 		remove_post_type_support( 'page', 'custom-fields' );
-		remove_post_type_support( 'page', 'comments' );
 	}
 
 	/**

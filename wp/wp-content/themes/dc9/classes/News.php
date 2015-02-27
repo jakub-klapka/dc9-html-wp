@@ -61,7 +61,7 @@ class News extends Pagination {
 			'public' => true,
 			'capability_type' => array( 'news', 'newses' ), //I know it's weird, but there has to be different plural to avoid bugs
 			'map_meta_cap' => true,
-			'supports' => array( 'title', 'editor', 'revisions', 'thumbnail', 'excerpt' ),
+			'supports' => array( 'title', 'editor', 'revisions', 'thumbnail', 'excerpt', 'comments' ),
 			'has_archive' => true,
 			'rewrite' => array(
 				'slug' => _x( 'novinky', 'URL slug', 'Theme' )

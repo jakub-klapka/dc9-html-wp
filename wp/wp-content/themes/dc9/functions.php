@@ -14,6 +14,7 @@ function load_template_class( $class_name ) {
 	return $$template_loader_instance_name;
 }
 
+load_textdomain( 'subscribe-reloaded', WP_LANG_DIR . '/plugins/subscribe-to-comments-reloaded-cs_CZ.mo' );
 
 /**
  * Autoloading of classes
@@ -193,3 +194,8 @@ if( is_admin() ) {
 	require $classes_path . 'VideoAdmin.php';
 }
 
+
+/*
+ * Comments
+ */
+require $classes_path . 'Comments.php';

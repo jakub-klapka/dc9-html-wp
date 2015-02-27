@@ -17,6 +17,9 @@ $dc9_layout->enqueue_novinky_single_style();
 		<?php endif; ?>
 
 	</div>
+
+	<?php comments_template(); ?>
+
 </article>
 
 <?php get_footer(); ?>

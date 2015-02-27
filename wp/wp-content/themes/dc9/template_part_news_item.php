@@ -1,7 +1,7 @@
 <div class="news_item">
 	<h2 class="same_as_h1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-	<div class="date"><?php _e('Zveřejněno'); ?> <?php echo get_the_date(); ?></div>
+	<div class="date"><?php _e('Zveřejněno'); ?> <?php echo get_the_date(); ?>, <?php echo get_comments_number(); ?> <?php _e( 'Komentářů', 'Theme' ); ?></div>
 
 	<?php if( has_post_thumbnail() ): ?>
 		<a class="thumbnail" href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"/></a>

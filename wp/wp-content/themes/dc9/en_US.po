@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DC9 Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-28 14:00+0100\n"
-"PO-Revision-Date: Fri Feb 27 2015 15:29:55 GMT+0100 (Střední Evropa (běžný "
+"PO-Revision-Date: Sun Mar 01 2015 20:47:40 GMT+0100 (Střední Evropa (běžný "
 "čas))\n"
 "Last-Translator: Kuba <lapak@lumiart.cz>\n"
 "Language-Team: Lumiart <lumiart@lumiart.cz>\n"
@@ -131,6 +131,18 @@ msgstr "Project news"
 msgid "Přidáno"
 msgstr "Added"
 
+#: newsletter.php:4
+msgid "Přihlášení k newsletteru"
+msgstr "Subscribe for newsletter"
+
+#: newsletter.php:6
+msgid ""
+"Zde můžete zadat svůj e-mail a my vás budeme pravidelně informovat o tom, co "
+"je na DC9 nového."
+msgstr ""
+"You can subscribe for newsletter here and we will regularly inform you about "
+"news at dc-9.eu. Just enter you e-mail:"
+
 #: search.php:5
 msgid "Výsledky hledání pro:"
 msgstr "Search results for:"
@@ -222,6 +234,22 @@ msgstr "(input correct number)"
 msgctxt "URL slug"
 msgid "novinky"
 msgstr ""
+
+#: classes/Newsletter.php:41
+msgid "Neoprávněný přístup"
+msgstr "Security error"
+
+#: classes/Newsletter.php:46
+msgid "Musíte zadat platný e-mail"
+msgstr "You have to enter valid e-mail"
+
+#: classes/Newsletter.php:57
+msgid "Váš e-mail byl zaregistrován, nyní prosím zkontrolujte svou e-mail schránku."
+msgstr "You was subscribed. Now please check your e-mail."
+
+#: classes/Newsletter.php:59
+msgid "Při vaší registraci nastala tato chyba:"
+msgstr "There was an error during your request:"
 
 #: classes/Updates.php:52
 msgctxt "Theme"

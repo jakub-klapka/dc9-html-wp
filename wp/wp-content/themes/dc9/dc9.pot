@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: DC9 Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-28 14:00+0100\n"
-"POT-Revision-Date: Fri Feb 27 2015 15:29:27 GMT+0100 (Střední Evropa (běžný "
+"POT-Revision-Date: Sun Mar 01 2015 20:40:00 GMT+0100 (Střední Evropa (běžný "
 "čas))\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -133,6 +133,16 @@ msgstr ""
 msgid "Přidáno"
 msgstr ""
 
+#: /newsletter.php:4
+msgid "Přihlášení k newsletteru"
+msgstr ""
+
+#: /newsletter.php:6
+msgid ""
+"Zde můžete zadat svůj e-mail a my vás budeme pravidelně informovat o tom, co "
+"je na DC9 nového."
+msgstr ""
+
 #: /search.php:5
 msgid "Výsledky hledání pro:"
 msgstr ""
@@ -223,6 +233,22 @@ msgstr ""
 #: /classes/News.php:67
 msgctxt "URL slug"
 msgid "novinky"
+msgstr ""
+
+#: /classes/Newsletter.php:41
+msgid "Neoprávněný přístup"
+msgstr ""
+
+#: /classes/Newsletter.php:46
+msgid "Musíte zadat platný e-mail"
+msgstr ""
+
+#: /classes/Newsletter.php:57
+msgid "Váš e-mail byl zaregistrován, nyní prosím zkontrolujte svou e-mail schránku."
+msgstr ""
+
+#: /classes/Newsletter.php:59
+msgid "Při vaší registraci nastala tato chyba:"
 msgstr ""
 
 #: /classes/Updates.php:52

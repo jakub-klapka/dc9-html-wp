@@ -199,3 +199,8 @@ if( is_admin() ) {
  * Comments
  */
 require $classes_path . 'Comments.php';
+
+/*
+ * Newsletter
+ */
+require $classes_path . 'Newsletter.php';

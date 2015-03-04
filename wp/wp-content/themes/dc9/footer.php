@@ -10,7 +10,7 @@
 				<?php dc9_generate_main_menu(); ?>
 			</nav>
 			<section class="subscription">
-				<a class="newsletter" href="<?php bloginfo( 'url' ); ?>newsletter">Newsletter</a>
+				<a class="newsletter" href="<?php bloginfo( 'url' ); ?>newsletter"><?php _e( 'Odběr novinek', 'Theme' ); ?></a>
 				<a class="rss" href="<?php echo trailingslashit( get_bloginfo('url') ); ?>feed/"><?php _e('RSS Feed', 'Theme'); ?></a>
 			</section>
 			<?php $friends_links = dc9_get_option( 'friends_links' ); ?>

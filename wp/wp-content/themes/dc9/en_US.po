@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DC9 Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-28 14:00+0100\n"
-"PO-Revision-Date: Sun Mar 01 2015 20:47:40 GMT+0100 (Střední Evropa (běžný "
+"PO-Revision-Date: Wed Mar 04 2015 12:30:07 GMT+0100 (Střední Evropa (běžný "
 "čas))\n"
 "Last-Translator: Kuba <lapak@lumiart.cz>\n"
 "Language-Team: Lumiart <lumiart@lumiart.cz>\n"
@@ -111,6 +111,10 @@ msgstr "Send"
 msgid "Menu"
 msgstr "Menu"
 
+#: footer.php:13
+msgid "Odběr novinek"
+msgstr "Newsletter"
+
 #: footer.php:14
 msgid "RSS Feed"
 msgstr "RSS Feed"
@@ -132,8 +136,8 @@ msgid "Přidáno"
 msgstr "Added"
 
 #: newsletter.php:4
-msgid "Přihlášení k newsletteru"
-msgstr "Subscribe for newsletter"
+msgid "Přihlášení k odběru novinek"
+msgstr "Subscribe for our newsletter"
 
 #: newsletter.php:6
 msgid ""
@@ -142,6 +146,10 @@ msgid ""
 msgstr ""
 "You can subscribe for newsletter here and we will regularly inform you about "
 "news at dc-9.eu. Just enter you e-mail:"
+
+#: newsletter.php:19
+msgid "vas@email.cz"
+msgstr "you@domain.com"
 
 #: search.php:5
 msgid "Výsledky hledání pro:"

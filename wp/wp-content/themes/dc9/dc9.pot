@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: DC9 Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-28 14:00+0100\n"
-"POT-Revision-Date: Sun Mar 01 2015 20:40:00 GMT+0100 (Střední Evropa (běžný "
+"POT-Revision-Date: Wed Mar 04 2015 12:28:51 GMT+0100 (Střední Evropa (běžný "
 "čas))\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -113,6 +113,10 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
+#: /footer.php:13
+msgid "Odběr novinek"
+msgstr ""
+
 #: /footer.php:14
 msgid "RSS Feed"
 msgstr ""
@@ -134,13 +138,17 @@ msgid "Přidáno"
 msgstr ""
 
 #: /newsletter.php:4
-msgid "Přihlášení k newsletteru"
+msgid "Přihlášení k odběru novinek"
 msgstr ""
 
 #: /newsletter.php:6
 msgid ""
 "Zde můžete zadat svůj e-mail a my vás budeme pravidelně informovat o tom, co "
 "je na DC9 nového."
+msgstr ""
+
+#: /newsletter.php:19
+msgid "vas@email.cz"
 msgstr ""
 
 #: /search.php:5

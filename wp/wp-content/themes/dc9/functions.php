@@ -76,9 +76,9 @@ if( is_admin() ){
 /**
  * Frontend shortcodes
  */
-if( !is_admin() ) {
+//if( !is_admin() ) { //Will need it in admin for newsletters
 	require_once $classes_path . 'ShortcodesFrontend.php';
-}
+//}
 
 /*
  * Theme options class and functions
